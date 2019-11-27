@@ -13,5 +13,5 @@ git config --global user.name "$GITHUB_ACTOR"
 #cd $INPUT_REPO_NAME
 git add .
 git commit -m "Add latest_issue"
-git push https://$INPUT_ORG_NAME:$GITHUB_TOKEN@github.com/$INPUT_ORG_NAME/$INPUT_REPO_NAME.git
+git push https://$INPUT_ORG_NAME:$GITHUB_TOKEN@github.com/$INPUT_ORG_NAME/$INPUT_REPO_NAME.git HEAD:master
 #cd ..
