@@ -1,0 +1,23 @@
+# action.yml
+name: 'Parse latest issue body'
+description: 'Grab body of latest issue'
+inputs:
+  org_name:
+    description: 'In the format of <org>'
+    required: true
+    default: 'john'
+  repo_name:
+    description: 'In the format of <repo>'
+    required: true
+    default: 'doe'
+  global_email:
+    description: 'In the format of <email@email.com>'
+    required: true
+    default: 'johndoe@johndoe.com'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.repo_name }}
+    - ${{ inputs.org_name }}
+    - ${{ inputs.global_email }}
