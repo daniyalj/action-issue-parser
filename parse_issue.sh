@@ -3,16 +3,9 @@ curl -H "Authorization: token $GITHUB_TOKEN" -X GET https://api.github.com/repos
 env
 sed 's/\"//g' temp_issues > latest_issue
 rm -rf temp_issues
-cat latest_issue
-ls
-# git clone https://github.com/$INPUT_ORG_NAME/$INPUT_REPO_NAME
-ls
-cat latest_issue
 mv latest_issue issues
 git config --global user.email "$INPUT_GLOBAL_EMAIL"
 git config --global user.name "$GITHUB_ACTOR"
-#cd $INPUT_REPO_NAME
 git add .
 git commit -m "Add latest_issue"
 git push https://$INPUT_ORG_NAME:$GITHUB_TOKEN@github.com/$INPUT_ORG_NAME/$INPUT_REPO_NAME.git HEAD:master
-#cd ..
