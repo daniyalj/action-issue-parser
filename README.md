@@ -32,5 +32,5 @@ jobs:
       with:
         org_name: 'daniyalj'
         repo_name: 'ga-hello-world'
-        global_email: 'daniyaljavedk@gmail.com'
+        global_email: 'foo@bar.com'
 ```
